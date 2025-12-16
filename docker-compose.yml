@@ -1,11 +1,9 @@
-version: "3.8"
-
 services:
-  mysql:
-    image: mysql:8.0
+  uts_mysql:
+    image: mysql:8
     container_name: uts_mysql
     environment:
-      MYSQL_ROOT_PASSWORD: root_uts
+      MYSQL_ROOT_PASSWORD: rootpass
       MYSQL_DATABASE: uts_mysql_db
       MYSQL_USER: uts_user
       MYSQL_PASSWORD: uts_password
@@ -13,7 +11,7 @@ services:
       uts_internal_net:
         ipv4_address: 172.30.4.10
 
-  postgres:
+  uts_postgres:
     image: postgres:15
     container_name: uts_postgres
     environment:
@@ -24,9 +22,11 @@ services:
       uts_internal_net:
         ipv4_address: 172.30.4.20
 
-  adminer:
+  uts_adminer:
     image: adminer
     container_name: uts_adminer
+    ports:
+      - "8017:8080"
     networks:
       uts_internal_net:
         ipv4_address: 172.30.4.30
