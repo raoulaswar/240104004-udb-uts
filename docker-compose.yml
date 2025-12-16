@@ -25,4 +25,3 @@ services:
     container_name: uts_adminer
     ports:
       - "8080:8080"
-
