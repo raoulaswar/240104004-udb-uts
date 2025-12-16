@@ -14,8 +14,8 @@ tahun:2025
 ## Screenshot Wajib
 ![Login postgres](images/postgres.png)
 
-![Login MySQL](images/login-mysql.png)
+![Login MySQL](images/mysql.png)
 
 ![adminer](images/adminer.png)
 
-![docker PS](images/docker ps.png)
+![docker PS](images/docker_ps.png)
